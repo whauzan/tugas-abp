@@ -8,7 +8,7 @@ class UploadImageController extends Controller
 {
     public function index (Request $req) {
         $message = '';
-        $validatedData = $req->validate([
+        $req->validate([
             'image_upload' => 'image|mimes:jpg|max:500'
         ],
         [
